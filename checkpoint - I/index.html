@@ -21,7 +21,6 @@
     </h2>
   </div>
 </header>
-
 <form class="form-group">
 
   <div class="video">
@@ -32,27 +31,36 @@
   <h1>Exemplo</h1>
 
   <div class="form-group-input">
-    <i class="fa fa-info icon icon1"></i>
-    <input type="text" placeholder="Título" name="title" class="userTitle" id="title" />
 
-    <div class="form-group-input">
-      <input type="text" placeholder="URL Imagem" name="name" class="userUrlImage" id="url" />
-      <i class="fa fa-picture-o icon icon2"></i>
+    <div class="container">
+      <i class="fa fa-info icon icon1"></i>
+      <input type="text" placeholder="Título" name="title" class="userTitle" id="title" required />
+      <div class="span-separator">
+        <span class="error-message-titulo"></span>
+      </div>
+      <input type="text" placeholder="URL Imagem" name="name" class="userUrlImage" id="url" required />
+      <span class="error-message-url"></span>
+      <i class="fa fa-picture-o icon icon2"></i> 
     </div>
-
   </div>
 
-  <textarea name="descricao" placeholder="Descrição" class="userDescription" id="description" type="text" cols="30" rows="10"></textarea>
-
-  <button type="submit" id="registerButton">Cadastrar</button>
+  <div class="container-text">
+     <textarea name="descricao" placeholder="Descrição" class="userDescription" id="description"  type="text" cols="30"
+    rows="10" required></textarea>
+    <div class="span-separator">
+      <span class="error-message-textarea"></span>
+    </div>
+  </div>
+ 
+  <button type="submit" id="register-button" disabled class="btn" >Cadastrar</button>
 
 </form>
 
 
 <div id="root">
   <h2 id="titulo">Novos Cursos</h2>
-  <p class="vazio">Não tem nada</p>
-  <div id="cards-cursos" >
+
+  <div id="cards-cursos">
     <div id="img">
       <img class="img" src="https://t3.ftcdn.net/jpg/05/31/71/02/360_F_531710260_ByieqNe7Ut6QBHgIR7xgdsxH7gICrHr1.jpg
         " alt="Imagem do card" />
@@ -72,6 +80,9 @@
     </p>
   </div>
 
+  <!--
+
+  
   <div id="cards-cursos">
     <img src="https://img.freepik.com/vetores-gratis/fundo-gradiente-ui-ux_23-2149052117.jpg?w=2000
         " alt="Imagem do card" />
@@ -144,7 +155,10 @@
       isso, são apresentados os fundamentos básicos da lógica da programação e as principais técnicas para o
       desenvolvimento de algoritmos: descrição narrativa, fluxograma e pseudocódigo.
     </p>
-  </div>
+  </div> 
+-->
+
+
 </div>
 
 
