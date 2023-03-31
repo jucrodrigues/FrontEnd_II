@@ -9,9 +9,7 @@
     <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
     <link rel="stylesheet" href="./styles/acesso.css" />
 
-    <!-- ---------------------- <script src="/scripts/utils.js"></script>
-    <script src="/scripts/index.js"></script>
-      lógica aplicada no login ----------------------- -->
+      <!-- --------------------------------------------------------------------------- -->
   </head>
 
   <body>
@@ -37,12 +35,13 @@
           <input id="inputPassword" type="password" required minlength="8" />
           <small>Preencha o campo senha corretamente. </small>
           <small> • Mínimo de oito caracteres. </small>
-           <small> • Letra maiúscula</small>
+          <small> • Letra maiúscula</small>
           <small> • Letra minúscula </small>
           <small> • Números</small>
         </div>
 
         <button id="btnSubmit" type="submit" disabled>Acessar</button>
+        
       </form>
       <div class="ingressar">
         <a href="./pages/signup.html">Não possui conta? Crie agora mesmo</a>
@@ -50,5 +49,6 @@
     </div>
 
     <script src="./scripts/index.js" type="module"></script>
+    <script src="./scripts/auth.js" type="module"></script>
   </body>
 </html>

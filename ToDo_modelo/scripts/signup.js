@@ -1,8 +1,10 @@
+import {authRegister} from './auth.js'
+
 const userNameRef = document.querySelector('#userName')
 const userSurnameRef = document.querySelector('#userSurname')
 const userEmailRef = document.querySelector('#userEmail')
 const userPasswordRef = document.querySelector('#userPassword')
-const confirmPasswordRerf = document.querySelector('#confirmPassword')
+const confirmPasswordRef = document.querySelector('#confirmPassword')
 const bntRegisterRef = document.querySelector('#bntRegister')
 
 var formErrors = {
@@ -10,17 +12,19 @@ var formErrors = {
   userSurname: true,
   userEmail: true,
   userPassword: true,
-  ConfirmPassword: true
+  confirmPassword: true
 };
+
 
 function checkFormValidity() {
 
   const formErrorsArray = Object.values(formErrors)
   const formValidity = formErrorsArray.every(item => item === false)
 
-  bntRegisterRef.disabled = !formValidity
+  bntRegisterRef.disabled = !formValidity;
 
 }
+
 
 function validateInput(inputRef) {
 
@@ -29,8 +33,10 @@ function validateInput(inputRef) {
 
   if (inputValid) {
     elementFatherRef.classList.remove('error')
+
   } else {
     elementFatherRef.classList.add('error')
+
   }
 
   formErrors[inputRef.id] = !inputValid
@@ -65,40 +71,42 @@ function validatePassword() {
   checkFormValidity();
 }
 
-function validateConfirmPassword (senha, confirm){
+function validateConfirmPassword(senha, confirm) {
   senha = userPasswordRef.value
-  confirm = confirmPasswordRerf.value
+  confirm = confirmPasswordRef.value
 
-  if(senha === confirm) {
-    confirmPasswordRerf.parentElement.classList.remove('error');
-    formErrors.confirmPassworrd = false;
+  if (senha === confirm) {
+    confirmPasswordRef.parentElement.classList.remove('error');
+    formErrors.confirmPassword = false;
   } else {
-    confirmPasswordRerf.parentElement.classList.add('error');
-    formErrors.confirmPassworrd = true;
+    confirmPasswordRef.parentElement.classList.add('error');
+    formErrors.confirmPassword = true;
   }
-
+  checkFormValidity()
 }
+
+
 
 function resetForm() {
   userNameRef.value = ''
   userSurnameRef.value = ''
   userEmailRef.value = ''
   userPasswordRef.value = ''
-  confirmPasswordRerf.value = ''
+  confirmPasswordRef.value = ''
 }
 
 function checkRegister(e) {
   e.preventDefault();
 
-  const userData = {
-    nome: userNameRef.value,
-    surname: userSurnameRef.value,
+  const userInfo = {
+    firtName: userNameRef.value,
+    LastName: userSurnameRef.value,
     email: userEmailRef.value,
     password: userPasswordRef.value,
-   confirmSenha: confirmPasswordRerf.value
+   
   }
-  console.log(userData)
-  resetForm()
+ authRegister()
+ resetForm()
 }
 
 
@@ -106,5 +114,5 @@ userNameRef.addEventListener('keyup', () => validateInput(userNameRef))
 userSurnameRef.addEventListener('keyup', () => validateInput(userSurnameRef))
 userEmailRef.addEventListener('keyup', validateEmail)
 userPasswordRef.addEventListener('keyup', validatePassword)
-confirmPasswordRerf.addEventListener('keyup', () => validateConfirmPassword(confirmPasswordRerf))
+confirmPasswordRef.addEventListener('keyup', () => validateConfirmPassword(confirmPasswordRef))
 bntRegisterRef.addEventListener('click', checkRegister)

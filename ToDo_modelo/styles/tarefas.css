@@ -18,6 +18,7 @@ a {
 
 .user-info {
   display: flex;
+  justify-content: space-around;
   align-items: center;
   margin-left: auto;
   color: rgb(223, 223, 223);
@@ -31,12 +32,13 @@ a {
   height: 2em;
   width: 2em;
   border-radius: 50%;
-  background-color: white;
-  opacity: .4;
   margin-left: .7em;
 }
+.user-image{
+margin-right: 20px;
+}
 
-#closeApp{
+#bntLogout{
   margin-left: 15px;
   font-size: .7em;
   background-color: rgb(218, 88, 88);

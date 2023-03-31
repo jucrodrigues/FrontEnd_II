@@ -9,8 +9,7 @@
     <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
     <link rel="stylesheet" href="../styles/acesso.css" />
 
-    <!-- ---------------------- lógica aplicada no registro -------------------- -->
-    <script src="/scripts/utils.js"></script>
+    <!-- ---------------------- -------------------- -->
   </head>
 
   <body>
@@ -25,16 +24,28 @@
         <h1>Cadastrar</h1>
         <div>
           <label for="userName"> Nome: </label>
-          <input id="userName" type="text" required minlength="4" maxlength="20"/>
+          <input
+            id="userName"
+            type="text"
+            required
+            minlength="4"
+            maxlength="20"
+          />
           <small>Preencha o campo nome corretamente.</small>
         </div>
-       
+
         <div>
           <label for="userSurname"> Sobrenome: </label>
-          <input id="userSurname" type="text" required minlength="6" maxlength="50"/>
-            <small>Preencha o campo sobrenome corretamente.</small>
+          <input
+            id="userSurname"
+            type="text"
+            required
+            minlength="6"
+            maxlength="50"
+          />
+          <small>Preencha o campo sobrenome corretamente.</small>
         </div>
-    
+
         <div>
           <label for="userEmail"> Email: </label>
           <input id="userEmail" type="email" required minlength="6" />
@@ -43,20 +54,20 @@
 
         <div>
           <label for="userPassword"> Senha: </label>
-          <input id="userPassword" type="password" required minlength="8"/>
+          <input id="userPassword" type="password" required minlength="8" />
           <small>Preencha o campo senha corretamente. </small>
           <small>Preencha o campo senha corretamente. </small>
           <small> • Mínimo de oito caracteres. </small>
-           <small> • Letra maiúscula</small>
+          <small> • Letra maiúscula</small>
           <small> • Letra minúscula </small>
           <small> • Números</small>
         </div>
-       <!-- <div>
+        <div>
           <label for="confirmPassword"> Repetir senha: </label>
-          <input id="confirmPassword" type="password" required minlength="2"/>
+          <input id="confirmPassword" type="password" required minlength="8" />
           <small>O valor precisa ser igual ao campo senha.</small>
         </div>
--->
+
         <button id="bntRegister" disabled>Criar conta</button>
       </form>
       <div class="ingressar">
@@ -65,5 +76,6 @@
     </div>
 
     <script src="../scripts/signup.js" type="module"></script>
+    <script src="../scripts/auth.js" type="module"></script>
   </body>
 </html>

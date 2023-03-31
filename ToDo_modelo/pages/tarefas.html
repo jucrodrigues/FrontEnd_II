@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- ----------------------------- estilos CSS ----------------------------- -->
-  <link rel="stylesheet" href="./styles/tarefas.css">
+  <link rel="stylesheet" href="../styles/tarefas.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <!-- ------------------- Biblioteca de icones - Fontawesome -------------------- -->
@@ -32,10 +32,15 @@
     </nav>
 
     <div class="user-info">
-      <p>Nome usuário</p>
-      <div class="user-image"></div>
-      <p id="closeApp">Finalizar sessão</i>
-      </p>
+      <p id="nameUser">Nome usuário</p>
+      <div class="user-image">
+        <img class="user-image" src="https://api.lorem.space/image/face?w=150&h=150" alt="foto do usuario">
+      </div>
+      <div>
+          <button id="bntLogout">Finalizar sessão</button>   
+    
+      </div>
+ 
     </div>
   </header>
 
@@ -44,13 +49,13 @@
     <div class="not-done "></div>
     <input id="novaTarefa" type="text" placeholder="Nova tarefa">
     <button type="submit">
-      <img src="./assets/plus.png" alt="Adicionar uma nova tarefa">
+      <img src="../assets/plus.png" alt="Adicionar uma nova tarefa">
     </button>
   </form>
 
 
   <ul class="tarefas-pendentes">
-    <!-- <div id="skeleton"> -->
+     <div id="skeleton">
     <div>
       <li class="tarefa">
         <div class="not-done"></div>
@@ -82,6 +87,8 @@
 
   </ul>
 
+
+  <script src="../scripts/tasks.js" type="module"></script>
 </body>
 
 </html>

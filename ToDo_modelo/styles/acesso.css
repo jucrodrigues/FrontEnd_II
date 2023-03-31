@@ -79,6 +79,7 @@ form div.error label {
 
 form div.error input {
   border-color: red;
+ /* border: 2px dashed red;*/
 }
 
 form div.error small {
@@ -104,6 +105,8 @@ button {
   text-align: center;
   padding-bottom: 2em;
 }
+
+
 
 .left {
   width: 50%;
